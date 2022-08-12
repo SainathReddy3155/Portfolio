@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <title>Portfolio</title>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            overflow-x: hidden;
+        }
+        
+        .navbar-brand {
+            margin: 9px;
+            color: white!important;
+            font-weight: 600;
+        }
+        
+        .nav-link {
+            color: white!important;
+            font-weight: 600;
+            margin: 8px;
+        }
+        
+        .nav-link:hover {
+            background-color: rgb(20, 94, 155)!important;
+            font-weight: 600;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .image_avatar {
+            width: "500px";
+            height: "500px";
+        }
+        
+        .maindiv {
+            background-image: linear-gradient(to right, #034EA1, #00B7AC);
+        }
+        
+        .maindivtext {
+            font-size: 60px;
+            color: white;
+            margin-left: 45px;
+        }
+        
+        .title {
+            font-size: 1.5rem;
+            margin-left: 101px;
+            color: white;
+        }
+        
+        .aboutdiv {
+            background-color: #F4D03F;
+            background-image: linear-gradient(132deg, #F4D03F 0%, #16A085 100%);
+        }
+        
+        .abouttitle {
+            font-size: 26px;
+            font-weight: 600;
+            color: white;
+        }
+        
+        .aboutdesc {
+            color: white;
+            font-size: 20px;
+        }
+        
+        .contactsection {
+            text-align: center;
+        }
+        
+        .contactme {
+            text-align: center;
+            font-size: 3rem;
+            line-height: 2.5rem;
+        }
+        
+        .fa-envelope {
+            font-size: 30px;
+            color: white;
+            background-color: #1abc9c;
+            width: 54px;
+            padding: 10px;
+            border-radius: 50%;
+        }
+        
+        .email {
+            font-size: 16px;
+        }
+        
+        .footer {
+            background-color: #2c3e50;
+            color: #fff;
+        }
+        
+        .socialmediaicons {
+            text-decoration: none;
+            color: white;
+            font-size: 26px;
+            border-color: #fff;
+        }
+        
+        .btn {
+            color: #212529;
+            border-radius: 100%;
+            width: 3.35rem;
+            height: 3.25rem;
+        }
+        
+        .btn-outline-light {
+            color: #f8f9fa;
+            border-color: #f8f9fa;
+        }
+        
+        .socialmediadiv {
+            margin-left: 170px;
+        }
+        
+        .copyrightdiv {
+            background-color: #1a252f;
+        }
+        
+        .copyright {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            font-weight: 500;
+            color: white;
+        }
+        /*laptopview */
+        
+        @media (max-width: 1024px)and (min-width: 768px) {
+            .nav-link {
+                margin: 2px;
+            }
+            .image_avatar {
+                align-items: center;
+                margin-left: -62px;
+            }
+            .maindivtext {
+                font-size: 26px;
+                align-items: center;
+                margin-left: 103px;
+            }
+            .title {
+                margin: 2px;
+                margin-left: 55px;
+                font-weight: 600;
+            }
+            .nav-link {
+                text-align: center;
+            }
+        }
+        /*tabletview*/
+        
+        @media (max-width:768px) and (min-width:768px) {
+            .image_avatar {
+                width: 100%;
+            }
+            .maindivtext {
+                margin-left: -65px!important;
+            }
+            .title {
+                font-size: 20px;
+                margin-left: 17px;
+            }
+            .hrline {
+                width: 100%!important;
+                margin-left: -46px!important;
+            }
+            .title {
+                margin: 2px!important;
+                margin-left: 27px!important;
+                font-weight: 600!important;
+            }
+            .nav-link {
+                text-align: center;
+            }
+        }
+        /*mobile L*/
+        
+        @media (max-width:768px) and (min-width:425px) {
+            .image_avatar {
+                width: 100%!important;
+            }
+            .maindivtext {
+                font-size: 26px!important;
+                margin-left: 45px!important;
+            }
+            .title {
+                display: flex;
+                justify-content: space-evenly;
+                margin: 0 43px;
+            }
+            .hrline {
+                width: 75%!important;
+                margin-left: 61px!important;
+            }
+            .nav-link {
+                text-align: center;
+            }
+        }
+        /*mobile M*/
+        
+        @media (max-width:768px) and (min-width:375px) {
+            .image_avatar {
+                width: 100%;
+            }
+            .maindivtext {
+                font-size: 26px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .hrline {
+                width: 100%;
+                margin-left: 38px;
+            }
+            .title {
+                margin-left: 68px!important;
+                font-size: 20px!important;
+            }
+            .nav-link {
+                text-align: center;
+            }
+        }
+        /*mobile S*/
+        
+        @media (max-width:768px) and (min-width:320px) {
+            .image_avatar {
+                width: 100%;
+            }
+            .maindivtext {
+                font-size: 26px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 30px;
+            }
+            .hrline {
+                width: 100%;
+                margin-left: 38px;
+            }
+            .title {
+                margin-left: 59px;
+                font-size: 17px;
+            }
+            .nav-link {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--Nav bar starting-->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <a class="navbar-brand" href="#">SAINATH REDDY</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" data-bs-target="#navbarNavDropdown" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left:63%;">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#aboutsection">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link " href="#contactsection">Contact</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <!--Nav bar ending-->
+
+
+    <!--Main div start-->
+    <div class="row maindiv">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-6">
+            <img src="istockphoto-1371797889-612x612-removebg-preview.png" alt="" class="image_avatar">
+            <h1 class="maindivtext">SAINATH REDDY</h1>
+            <hr class="hrline" style="height:2px;width:83%;color:white;background-color:white;border:2px solid white;">
+            <p class="title">Student - Software Developer</p>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+    <!--Main div ending-->
+
+    <!--About section-->
+    <div class="row aboutdiv" id="aboutsection">
+        <div class="col-sm-12" style="text-align:center;">
+            <p class="abouttitle">ABOUT</p>
+            <p class="aboutdesc">Software Developer with 1 year of experience in HTML,CSS,JavaScript,Automation Scripts, APIs, Python Flask ,<br>Selenium (Python), NLP and Data Analysis using Python.</p>
+        </div>
+
+    </div>
+    <!--end of about section-->
+
+    <!--Skills section-->
+    <!-- <div class="row skillsdiv">
+
+        <div class="col-sm-4"></div>
+        <div class="col-sm-6">
+            <p class="skilltitle">SKILLS</p>
+
+        </div>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-2"></div>
+        <p class="skills">Python<br>(Flask,NLP,Selenium,Data Analysis)<br/>
+            <progress max="100" value="65" style="height: 40%;"></progress>
+            <p>
+                <p class="skills">SQL<br>
+                    <progress max="100" value="60" style="height: 56%; "></progress>
+                    <p>
+                        <p class="skills">HTML<br>
+                            <progress max="100" value="80" style="height: 56%; "></progress>
+                            <p>
+                                <p class="skills">CSS<br>
+                                    <progress max="100" value="70" style="height: 56%; "></progress>
+                                    <p>
+                                        <p class="skills">JAVA SCRIPT<br>
+                                            <progress max="100" value="50" style="height: 56%; "></progress>
+                                            <p>
+    </div> -->
+    <!--end of Skills section-->
+
+
+    <!-- contact me -->
+    <div class="row mt-4 contactsection" id="contactsection">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <h3 class="contactme">CONTACT ME</h3>
+            <i class="fa-solid fa-envelope mt-2"></i><br>
+            <a href="mailto:sainathreddy1220@gmail.com"><i class="email mt-1">sainathreddy1220@gmail.com</h4></i></a>
+
+        </div>
+    </div>
+    <!--end of contact me -->
+
+    <!--footer start-->
+    <div class="row footer mt-3">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-4">
+            <h2 class="location mt-3">LOCATION</h2>
+            <p>PIN:500076
+                <BR>Hyderabad ,Telangana</p>
+        </div>
+        <div class="col-sm-4 socialmediadiv ">
+            <h2 class="socialmedia mt-3 ml-10">AROUND THE WEB</h2>
+            <a class="socialmediaicons btn btn-outline-light" href="https://www.linkedin.com/in/sainath-reddy-56a677191/"><i class="fa-brands fa-linkedin"></i></a>
+            <a class="socialmediaicons btn btn-outline-light" href="https://github.com/SainathReddy3155"><i class="fa-brands fa-github"></i></a>
+            <a class="socialmediaicons btn btn-outline-light" href=" https://twitter.com/Sainath3155?t=LhhRRB6jGl26tF7_Ppg64w&s=08"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+    </div>
+    <!--footer ending-->
+    <div class="row copyrightdiv">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            <p class="copyright">Copyright © 2022 | Sainath Reddy</p>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
