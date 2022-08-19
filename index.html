@@ -167,6 +167,76 @@
             background-color: white;
             color: black;
         }
+        .login {
+              color: white;
+              background: background: #136a8a;
+              background: 
+                -webkit-linear-gradient(to top, #fff, #fff);
+              background: 
+                linear-gradient(top to bottom, #fff, #8d448b);
+              margin: auto;
+              box-shadow: 
+                0px 2px 10px rgba(0,0,0,0.2), 
+                0px 10px 20px rgba(0,0,0,0.3), 
+                0px 30px 60px 1px #00000019;
+              border-radius: 8px;
+              padding: 50px;
+            }
+            .login .head {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            .login .head .company {
+              font-size: 2.2em;
+            }
+            .login .msg {
+              text-align: center;
+              color:red;
+            }
+            .login .form input[type=text].text {
+              border: none;
+              background: none;
+              box-shadow: 0px 2px 0px 0px #8d448b;
+              width: 100%;
+              color: #000;
+              font-size: 1em;
+              outline: none;
+            }
+            .login .form .text::placeholder {
+              color: #ccc;
+            }
+            .login .form input[type=password].password {
+              border: none;
+              background: none;
+              box-shadow: 0px 2px 0px 0px #8d448b;
+              width: 100%;
+              color: black;
+              font-size: 1em;
+              outline: none;
+              margin-bottom: 20px;
+              margin-top: 20px;
+            }
+            .login .form .password::placeholder {
+              color: #ccc;
+            }
+            .login .form .btn-login {
+              background: #ae6fb7;
+              text-decoration: none;
+              color: #fff;
+              font-weight:600;
+              box-shadow: 0px 0px 0px 2px white;
+              border-radius: 3px;
+              padding: 5px 2em;
+              transition: 0.5s;
+              border-color:#ae6fb7;
+            }
+            .login .form .btn-login:hover {
+              background: #8d448b;
+              color: #ccc;
+              transition: 0.5s;
+              border-color:#ae6fb7;
+            }
         
         .darkmode {
             color: white;
@@ -475,7 +545,7 @@
     </div>
     <!--end of contact me -->
     <!--form contact-->
-    <div class="content">
+<!--     <div class="content">
 
         <div class="container letstalk">
             <div class="row justify-content-center">
@@ -527,8 +597,19 @@
         </div>
 
     </div>
-
+ -->
     <!--end of form contact-->
+    <!test form start-->
+                    <section class='login' id='login'>
+                  <div class='form'>
+                    <form method="POST" action="/login">
+                  <input type="text" placeholder='Enter Your Username' class='text' id='username' name="username" required><br>
+                  <input type="password" placeholder='Enter Your Password' class='password' name="password"><br>
+                  <center><button type="submit" class='btn-login' id='do-login'>Login</button></center>
+                    </form>
+                  </div>
+                </section>
+    <!test form end-->
     <!--footer start-->
     <div class="row footer mt-3">
         <div class="col-sm-2"></div>
