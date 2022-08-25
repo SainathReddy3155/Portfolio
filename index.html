@@ -582,6 +582,34 @@
                 //document.getElementById("modes").innerHTML = "Light";
         }
     </script> -->
+    <script type="text/javascript">
+        $(document).on("submit", "#formidtest", function(e) {
+            e.preventDefault();
+            //  console.log("hello");
+
+            $.ajax({
+                url: '/ajaxsending',
+                type: "POST",
+                cache: false,
+                data: {
+                    name: $("#name").val(),
+                    email: $("#email").val(),
+                    message: $("#message").val()
+                },
+                success: function() {
+                    //alert("form summbitted successfully")
+                    successmessage = 'Data was succesfully captured';
+                    alert(successmessage)
+                    console.log("data saved");
+                    $("input").val("");
+                },
+                error: function() {
+                    console.log("errror happend")
+                }
+            })
+
+        });
+    </script>
 
 
 </body>
