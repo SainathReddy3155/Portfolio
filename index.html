@@ -394,6 +394,9 @@
                 width: 150px!important;
                 margin-top: 9px!important;
             }
+            .active {
+                background-color: #034EA1;
+            }
         }
     </style>
 </head>
@@ -500,38 +503,63 @@
     </div>
 
     <!--Stepper start-->
-    <div class="container">
+    <div class="container mt-5">
         <div class="row">
             <div class="col-sm-12" style="display: flex;justify-content: center;">
                 <div class="btn-group" role="group" aria-label="Basic outlined example">
-                    <button type="button" class="btn btn-outline-primary stepperbuttons">Education</button>
-                    <button type="button" class="btn btn-outline-primary stepperbuttons">Experience</button>
-                    <button type="button" class="btn btn-outline-primary stepperbuttons">Projects</button>
+                    <button type="button" class="btn btn-outline-primary stepperbuttons active" id="steppereduid">Education</button>
+                    <button type="button" class="btn btn-outline-primary stepperbuttons" id="stepperexpid">Experience</button>
+                    <button type="button" class="btn btn-outline-primary stepperbuttons" id="stepperproid">Projects</button>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-12 mt-5" style="display: flex;justify-content: center;">
-                <div class="card" id="educationcard">
+                <div class="card" id="educationcard" style="width: 100%;">
                     <div class="card-body">
-                        Education. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                        <div>
+                            <span style="font-weight: 500;">Bharat Institute of Engineering & Technology</span><br><span><small> Bachelor of Technology - BTech Information Technology(70 %)</small></span><br><span><li><small>2017-2021</small></li></span>
+                        </div>
+                        <hr>
+                        <div>
+                            <span style="font-weight: 500;">Narayana Junior College</span><br><span><small> MPC(83 %)</small></span><br><span><li><small>2015-2017</small></li></span>
+                        </div>
+                        <hr>
+                        <div>
+                            <span style="font-weight: 500;">Johnson Grammar School</span><br><span><li><small>2015-2017</small></li></span>
+                        </div>
                     </div>
                 </div>
-                <div class="card" id="experiencecard" style="display:none;">
-                    <div class="card-body">
-                        experience. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+            </div>
+            <div class="card" id="experiencecard" style="display:none;">
+                <div class="card-body">
+                    <div>
+                        <span style="font-weight: 500;">Multiplier AI Solutions</span><br><span><small>Software Application Developer</small></span><br><span><li><small>Oct 2021-Present · 1 yr 4 mos</li></small></li></span>
                     </div>
                 </div>
-                <div class="card" id="projectscard" style="display:none;">
-                    <div class="card-body">
-                        projects. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+            </div>
+            <div class="card" id="projectscard" style="display:none;">
+                <div class="card-body">
+                    <div>
+                        <span style="font-weight: 500;"><li>Web Scraping Application</li></span></span>
+                        <span>Web scraping Application is an Python flask based application and where users have different roles and responsibilites(User based login system like admin,user). This application scrapes the live data from Twitter,Linkedin,Youtube,Google My Business(GMB) and other doctor based websites. This application uses RDS sqlserver of aws to store the data and hosted in EC2 instance.   </span>
+                    </div>
+                    <div class="mt-2">
+                        <span style="font-weight: 500;"><li>HR Ticket Resolving Application</li></span></span>
+                        <span>HR Ticket Resolving application is an role based application where employee uses it  to raise tickets to HR's of the organization and Hr can resolve the tickets. Users get email notification of their ticket status(solved or unsolved)</span>
+                    </div>
+                    <div class="mt-2">
+                        <span style="font-weight: 500;"><li>Analytics Dashboard</li></span></span>
+                        <span>Analytics Dashboard is python based application which used to check the analytics of the users in different kind of charts(pie,line,bar,map etc).Admin can perform CRUD operations and manipulate the data on daily basis.</span>
+                    </div>
+                    <div class="mt-2">
+                        <span style="font-weight: 500;"><li>Dialogflow chatbot</li></span></span>
+                        <span>Dialogflow chatbot using the service provided by the google cloud and hosted the chatbot in whatsapp using third party api's.</span>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
     <!--Stepper end-->
@@ -646,9 +674,9 @@
         </div>
         <div class="col-sm-4 socialmediadiv ">
             <h2 class="socialmedia mt-3 ml-10">AROUND THE WEB</h2>
-            <a class="socialmediaicons btn btn-outline-light" href="https://www.linkedin.com/in/sainath-reddy-56a677191/"><i class="fa-brands fa-linkedin"></i></a>
-            <a class="socialmediaicons btn btn-outline-light" href="https://github.com/SainathReddy3155"><i class="fa-brands fa-github"></i></a>
-            <a class="socialmediaicons btn btn-outline-light" href=" https://twitter.com/Sainath3155?t=LhhRRB6jGl26tF7_Ppg64w&s=08"><i class="fa-brands fa-twitter"></i></a>
+            <a class="socialmediaicons btn btn-outline-light" href="https://www.linkedin.com/in/sainath-reddy-56a677191/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a class="socialmediaicons btn btn-outline-light" href="https://github.com/SainathReddy3155" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a class="socialmediaicons btn btn-outline-light" href=" https://twitter.com/Sainath3155?t=LhhRRB6jGl26tF7_Ppg64w&s=08" target="_blank"><i class="fa-brands fa-twitter"></i></a>
         </div>
     </div>
     <!--footer ending-->
@@ -728,12 +756,16 @@
     $(document).ready(function() {
         $(".btn-outline-primary").on("click", function() {
             var text = $(this).html()
-                // $(this).css("background-color","blue");
-                // console.log(text)
+
+
+            // $(this).css("background-color","blue");
+            // console.log(text)
+            $('.btn-outline-primary').removeClass('active');
             if (text == "Experience") {
                 $("#educationcard").hide();
                 $("#projectscard").hide();
                 $("#experiencecard").show();
+                $(this).addClass("active");
 
 
 
@@ -741,11 +773,14 @@
                 $("#educationcard").hide();
                 $("#experiencecard").hide();
                 $("#projectscard").show();
+                $(this).addClass("active");
+
 
             } else if (text == "Education") {
                 $("#educationcard").show();
                 $("#experiencecard").hide();
                 $("#projectscard").hide();
+                $(this).addClass("active");
 
             }
         })
